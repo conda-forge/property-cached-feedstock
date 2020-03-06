@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-property--cached-green.svg)](https://anaconda.org/conda-forge/property-cached) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/property-cached.svg)](https://anaconda.org/conda-forge/property-cached) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/property-cached.svg)](https://anaconda.org/conda-forge/property-cached) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/property-cached.svg)](https://anaconda.org/conda-forge/property-cached) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-property_cached-green.svg)](https://anaconda.org/conda-forge/property_cached) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/property_cached.svg)](https://anaconda.org/conda-forge/property_cached) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/property_cached.svg)](https://anaconda.org/conda-forge/property_cached) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/property_cached.svg)](https://anaconda.org/conda-forge/property_cached) |
 
 Installing property-cached
 ==========================
@@ -40,10 +41,10 @@ Installing `property-cached` from the `conda-forge` channel can be achieved by a
 conda config --add channels conda-forge
 ```
 
-Once the `conda-forge` channel has been enabled, `property-cached` can be installed with:
+Once the `conda-forge` channel has been enabled, `property-cached, property_cached` can be installed with:
 
 ```
-conda install property-cached
+conda install property-cached property_cached
 ```
 
 It is possible to list all of the versions of `property-cached` available on your platform with:
@@ -67,7 +68,7 @@ A feedstock is made up of a conda recipe (the instructions on what and how to bu
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.org/) it is possible to build and upload installable
+and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
 packages to the [conda-forge](https://anaconda.org/conda-forge)
 [Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
 
