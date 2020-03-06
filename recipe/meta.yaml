@@ -1,4 +1,4 @@
-{% set version = "1.6.3" %}
+{% set version = "1.6.4" %}
 
 package:
   name: property-cached
@@ -6,12 +6,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/p/property-cached/property-cached-{{ version }}.zip
-  sha256: 614b6972e279d981b7bccabd0b1ce4601c1739a6eb9905fd79a9c485fb20a1e0
+  sha256: 3e9c4ef1ed3653909147510481d7df62a3cfb483461a6986a6f1dcd09b2ebb73
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,7 +30,7 @@ about:
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
-  summary: "A decorator for caching properties in classes (forked from cached-property)."
+  summary: A decorator for caching properties in classes (forked from cached-property).
 
 extra:
   recipe-maintainers:
