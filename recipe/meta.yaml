@@ -10,20 +10,38 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
 
-requirements:
-  host:
-    - python
-    - pip
-  run:
-    - python
-    - setuptools
+outputs:
+  - name: property-cached
+    script: build_base.bat  # [win]
+    script: build_base.sh  # [not win]
+    build:
+      noarch: python
+    requirements:
+      host:
+        - python
+        - pip
+        - setuptools >=39.2
+      run:
+        - python
+        - setuptools >=39.2
+    test:
+      requires:
+        - pip
+      commands:
+        - pip check
+      imports:
+        - property_cached
 
-test:
-  imports:
-    - property_cached
+  - name: property_cached
+    build:
+      noarch: generic
+    requirements:
+      run:
+        - {{ pin_subpackage('property-cached', max_pin="x.x.x") }}
+    test:
+      imports:
+        - property_cached
 
 about:
   home: https://github.com/althonos/property-cached/
