@@ -5,11 +5,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/p/property-cached/property-cached-{{ version }}.zip
+  url: https://pypi.org/packages/source/p/property-cached/property-cached-{{ version }}.zip
   sha256: 3e9c4ef1ed3653909147510481d7df62a3cfb483461a6986a6f1dcd09b2ebb73
 
 build:
-  number: 0
+  number: 1
 
 outputs:
   - name: property-cached
@@ -19,15 +19,16 @@ outputs:
       noarch: python
     requirements:
       host:
-        - python >=3.5
+        - python {{ python_min }}
         - pip
         - setuptools >=39.2
       run:
-        - python >=3.5
+        - python >={{ python_min }}
         - setuptools >=39.2
     test:
       requires:
         - pip
+        - python {{ python_min }}
       commands:
         - pip check
       imports:
